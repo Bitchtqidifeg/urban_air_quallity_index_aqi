@@ -1,0 +1,260 @@
+
+/* ===================================================
+   COLORFUL THEME + PLAYFUL BACKGROUND BLOBS
+=================================================== */
+
+:root {
+    --accent-1: #ff6b6b; /* coral red */
+    --accent-2: #ffd166; /* sunflower */
+    --accent-3: #6ef6c5; /* mint */
+    --accent-4: #6b8eff; /* periwinkle */
+    --accent-5: #b28cff; /* lavender */
+}
+
+.stApp {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(140deg, #fff7fb 0%, #f2fbff 35%, #f7fff2 70%, #fff7f5 100%);
+}
+
+/* make the whole page colorful and remove white panels */
+html, body, .stApp, .reportview-container, .main {
+    background: radial-gradient(circle at 10% 10%, #ffe6f0 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, #e8f6ff 0%, transparent 25%),
+                linear-gradient(90deg, #fff0f5 0%, #f7f0ff 30%, #f0fff7 60%, #fff9f0 100%) !important;
+    background-attachment: fixed;
+}
+
+/* colorful moving blobs using pseudo elements */
+.stApp::before,
+.stApp::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(70px);
+    opacity: 0.75;
+    transform: translate3d(0,0,0);
+}
+
+.stApp::before {
+    width: 650px;
+    height: 650px;
+    left: -15%;
+    top: -20%;
+    background: radial-gradient(circle at 30% 30%, var(--accent-4) 0%, transparent 40%), radial-gradient(circle at 70% 70%, var(--accent-5) 0%, transparent 30%);
+    animation: blobFloatA 14s infinite linear;
+}
+
+.stApp::after {
+    width: 520px;
+    height: 520px;
+    right: -10%;
+    bottom: -15%;
+    background: radial-gradient(circle at 20% 40%, var(--accent-1) 0%, transparent 35%), radial-gradient(circle at 80% 60%, var(--accent-2) 0%, transparent 40%);
+    animation: blobFloatB 18s infinite linear;
+}
+
+@keyframes blobFloatA {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateY(18px) rotate(12deg) scale(1.03); }
+    100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes blobFloatB {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    50% { transform: translateY(-20px) rotate(-8deg) scale(1.06); }
+    100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+/* ensure content sits above the decorative blobs */
+.block-container, header, .main, .stHeader {
+    position: relative; z-index: 2;
+}
+
+/* allow the color background to show through the content area */
+.block-container, .stApp .main, .stApp .block-container {
+    background: transparent !important;
+}
+
+/* remove default white background from Streamlit panes */
+section[data-testid="stSidebar"] { background: linear-gradient(180deg, rgba(18,60,138,0.95) 0%, rgba(21,101,192,0.95) 100%); }
+.css-1d391kg, .css-1r6slb0, .css-1v3fvcr { background: transparent !important; }
+
+/* ensure text is readable on colorful background */
+.stApp, .stApp * {
+    color: #0b1220 !important;
+}
+
+/* make sure the app occupies full viewport */
+.stApp { min-height: 100vh; }
+
+/* ===================================================
+   TYPOGRAPHY
+=================================================== */
+
+h1 { color: #123c8a; font-weight: 800; }
+h2 { color: #1e6ef2; font-weight: 700; }
+h3 { color: #6b8eff; }
+
+/* ===================================================
+   HERO CARD (colorful)
+=================================================== */
+
+.hero-card {
+    background: linear-gradient(135deg, var(--accent-4) 0%, var(--accent-5) 40%, var(--accent-1) 100%);
+    padding: 26px 30px;
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(75, 85, 255, 0.12);
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-card .hero-title { font-size: 1.6rem; font-weight: 800; }
+.hero-card .hero-subtitle { opacity: 0.95; margin-top: 6px; }
+
+/* ===================================================
+   TABS (colorful underline)
+=================================================== */
+
+div[data-testid="stTabList"] button { color: #333; }
+div[data-testid="stTabList"] button[aria-selected="true"] {
+    background: linear-gradient(90deg, rgba(255,122,89,0.10), rgba(107,142,255,0.08));
+    border-bottom: 3px solid var(--accent-4);
+    box-shadow: 0 6px 18px rgba(20,40,80,0.04);
+}
+
+/* ===================================================
+   BUTTONS (vibrant)
+=================================================== */
+
+.stButton > button, .stDownloadButton > button {
+    width: 100%;
+    color: white;
+    border-radius: 14px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    box-shadow: 0 10px 30px rgba(16, 24, 64, 0.12);
+}
+
+.stButton > button {
+    background: linear-gradient(90deg, var(--accent-4), var(--accent-5));
+}
+.stButton > button:hover { transform: translateY(-2px); }
+
+.stDownloadButton > button {
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
+}
+
+/* ===================================================
+   METRICS (colorful left accent)
+=================================================== */
+
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,0.98);
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(10,20,40,0.06);
+    border-left: 8px solid transparent;
+}
+
+/* colorful accents for metric boxes (cycle through palette) */
+[data-testid="stMetric"]:nth-of-type(3n+1) { border-left-color: var(--accent-1); }
+[data-testid="stMetric"]:nth-of-type(3n+2) { border-left-color: var(--accent-4); }
+[data-testid="stMetric"]:nth-of-type(3n) { border-left-color: var(--accent-3); }
+
+/* metric number styling tweak */
+div[data-testid="metric-container"] > div > div:nth-child(1) {
+    font-weight: 800;
+}
+
+/* ===================================================
+   INPUTS & CARDS
+=================================================== */
+
+.stTextInput input, .stNumberInput input {
+    border-radius: 12px; border: 2px solid rgba(0,0,0,0.06); padding: 10px 12px; background: white;
+}
+.stTextInput input:focus, .stNumberInput input:focus { box-shadow: 0 8px 30px rgba(66, 133, 244, 0.08); border-color: var(--accent-4); }
+
+.stAlert { border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); }
+
+hr { border: 1px solid rgba(30,110,242,0.08); }
+
+section[data-testid="stSidebar"] { background: linear-gradient(180deg, #123c8a 0%, #1565c0 100%); }
+section[data-testid="stSidebar"] * { color: white; }
+
+/* SITE CONTAINER + GLASSY CARD */
+.block-container { max-width: 1100px; margin: 28px auto !important; padding-left: 20px !important; padding-right: 20px !important; }
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.6)); border-radius: 16px; padding: 18px; box-shadow: 0 12px 40px rgba(10,20,40,0.06); backdrop-filter: blur(6px); }
+
+/* Make all Streamlit panels transparent so the colorful background shows through */
+.stApp * {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Reapply readable backgrounds where needed */
+.stTextInput input, .stNumberInput input, textarea, select, input[type="text"], input[type="number"] {
+    background: rgba(255,255,255,0.94) !important;
+    border-radius: 12px !important;
+    border: 2px solid rgba(0,0,0,0.06) !important;
+}
+
+.stButton > button, .stDownloadButton > button {
+    background-clip: padding-box !important;
+}
+
+/* Ensure charts and plot containers remain opaque for readability */
+.stPlotlyChart, .stChartContainer, .stGraphViz {
+    background: rgba(255,255,255,0.92) !important;
+    border-radius: 12px !important;
+}
+
+/* Make sure header and title area uses transparent background but readable text */
+.stApp header, .stApp .stHeader {
+    background: transparent !important;
+}
+
+/* ==================== BRIGHTEN & BUTTON THEME OVERRIDES ==================== */
+/* redefine accents to brighter palette */
+:root {
+    --accent-1: #ff4d6d; /* bright coral */
+    --accent-2: #ffd24a; /* bright sunflower */
+    --accent-3: #45e6b8; /* vivid mint */
+    --accent-4: #4f9bff; /* vivid blue */
+    --accent-5: #d29bff; /* bright lavender */
+}
+
+/* enliven blobs */
+.stApp::before { background: radial-gradient(circle at 30% 30%, rgba(79,155,255,0.98) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(210,155,255,0.95) 0%, transparent 30%); filter: blur(72px); opacity: .9; }
+.stApp::after { background: radial-gradient(circle at 20% 40%, rgba(255,77,109,0.98) 0%, transparent 35%), radial-gradient(circle at 80% 60%, rgba(255,210,74,0.95) 0%, transparent 40%); filter: blur(72px); opacity: .88; }
+
+/* brighter hero */
+.hero-card { background: linear-gradient(135deg, rgba(79,155,255,0.98) 0%, rgba(210,155,255,0.98) 45%, rgba(255,77,109,0.98) 100%); box-shadow: 0 30px 80px rgba(79,120,255,0.12), inset 0 -8px 28px rgba(255,255,255,0.06); }
+
+/* button treatments */
+.stButton > button { background: linear-gradient(90deg, var(--accent-4), var(--accent-5)) !important; color: white !important; border-radius: 16px !important; height:52px !important; font-size:16px !important; box-shadow: 0 18px 40px rgba(79,120,255,0.18) !important; }
+.stButton > button:hover { transform: translateY(-6px) scale(1.02) !important; box-shadow: 0 26px 60px rgba(79,120,255,0.22) !important; transition: all 160ms ease !important; }
+.stDownloadButton > button { background: linear-gradient(90deg, var(--accent-3), var(--accent-2)) !important; color: #072634 !important; border-radius: 16px !important; height:52px !important; box-shadow: 0 18px 40px rgba(94,246,199,0.12) !important; }
+.stDownloadButton > button:hover { transform: translateY(-6px) scale(1.02) !important; box-shadow: 0 26px 60px rgba(94,246,199,0.18) !important; transition: all 160ms ease !important; }
+
+/* inputs more pill-like and bright */
+.stTextInput input, .stNumberInput input { border-radius: 18px !important; background: rgba(255,255,255,0.96) !important; padding: 14px 16px !important; border: 2px solid rgba(0,0,0,0.06) !important; box-shadow: 0 10px 30px rgba(16,24,64,0.06) !important; }
+
+/* metrics brighter left accent */
+[data-testid="stMetric"] { border-left-width: 12px !important; }
+
+/* ensure main blocks are slightly translucent to show color */
+.block-container, .card { background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.82)) !important; }
+
+/* make headings pop */
+h1 { font-size: 2.8rem !important; letter-spacing: -0.02em; }
+h2 { font-size: 2.2rem !important; }
+
+/* small polish for download button icon spacing */
+.stDownloadButton > button > svg { margin-right: 8px; }
+
+/* end bright overrides */
