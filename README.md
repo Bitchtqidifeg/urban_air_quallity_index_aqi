@@ -26,12 +26,12 @@ Notes and tips:
 - `.streamlit/config.toml` sets `headless=true` and disables CORS for cloud hosting.
 - If you use private API keys (e.g., OpenWeather API key), add them using Streamlit Cloud's **Secrets** (Dashboard → Settings → Secrets) as `API_KEY` and read them in `api.py` using `st.secrets`.
 
-Local test before deployment:
+Local test before deployment:https://urbanairquallityindexaqi-4xh43c2ucdhjgktdfnniyn.streamlit.app/
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
-python -m pip install -r requirements.txt
+
 streamlit run app.py
 ```
 
