@@ -1,196 +1,131 @@
-<div align="center">
-
 # 🌍 Urban Air Quality Prediction System
 
-### 🌱 AI-Powered Real-Time Air Quality Monitoring & AQI Prediction
-
-<p align="center">
-<img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit">
-<img src="https://img.shields.io/badge/Machine_Learning-Random_Forest-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/OpenWeather-API-orange?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge">
-</p>
-
-### 🚀 Try the Live Application
-
-### 🌐 https://urbanairquallityindexaqi-4xh43c2ucdhjgktdfnniyn.streamlit.app/
-
-⭐ **Predict • Monitor • Analyze • Stay Safe**
-
-</div>
+An AI-powered web application that provides **real-time air quality monitoring** and **AQI prediction** using Machine Learning. The application helps users understand current pollution levels, weather conditions, and health recommendations through an interactive dashboard.
 
 ---
 
-# 🌟 About the Project
+## 🚀 Live Demo
 
-The **Urban Air Quality Prediction System** is an AI-powered web application that combines **Machine Learning** and **real-time weather APIs** to monitor and predict Air Quality Index (AQI).
-
-The application helps users understand pollution levels, visualize pollutants, receive personalized health recommendations, and download professional PDF reports.
+🔗 https://urbanairquallityindexaqi-4xh43c2ucdhjgktdfnniyn.streamlit.app/
 
 ---
 
-# ✨ Key Features
+## 📌 Features
 
-### 🌍 Live Air Quality Monitoring
+- 🌍 Live Air Quality Index (AQI) Monitoring
 - 📍 Search AQI by City Name
-- 🌡 Live Temperature
-- 💧 Humidity
-- 🌬 Wind Speed
-- 🧭 Atmospheric Pressure
-
-### 📊 Interactive Dashboard
-- 🎯 AQI Gauge
-- 📈 Pollutant Charts
-- 🎨 Beautiful Visualizations
-
-### 🤖 Machine Learning Prediction
-- 🌲 Random Forest Regression
-- 📉 Predict AQI using pollutant values
-- ⚡ Fast Predictions
-
-### 💡 Smart Recommendations
-- 😊 Health Suggestions
-- 🚨 Pollution Alerts
-
-### 📄 Reports
-- 📥 Download Professional PDF Report
+- 🌡 Real-time Weather Information
+  - Temperature
+  - Humidity
+  - Wind Speed
+  - Pressure
+- 📊 Interactive AQI Gauge
+- 📈 Pollutant Visualization
+- 🤖 AQI Prediction using Machine Learning
+- 💡 Health Recommendations based on AQI
+- 📄 Download AQI Report as PDF
+- 🎨 User-friendly Streamlit Interface
 
 ---
 
-# 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
-| 💻 Category | 🚀 Technologies |
-|-------------|-----------------|
-| Programming | Python |
-| Machine Learning | Scikit-learn |
-| Algorithm | Random Forest Regressor |
-| Frontend | Streamlit |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Plotly |
-| API | OpenWeather API |
-| PDF Reports | ReportLab |
+### Programming Language
+- Python
 
----
+### Machine Learning
+- Scikit-learn
+- Random Forest Regressor
 
-# 🧠 Machine Learning Model
+### Web Framework
+- Streamlit
 
-### 🌲 Algorithm
+### Data Analysis
+- Pandas
+- NumPy
 
-✅ Random Forest Regressor
+### Data Visualization
+- Plotly
 
-### 📊 Model Performance
+### API
+- OpenWeather API
 
-| Metric | Value |
-|--------|-------|
-| 🎯 R² Score | **0.91** |
-| 📉 MAE | **20.85** |
+### Report Generation
+- ReportLab
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
-📦 Urban-Air-Quality-Prediction
+Urban-Air-Quality-Prediction/
 │
-├── 🏠 app.py
-├── 🌍 Home.py
-├── 🌐 api.py
-├── 🤖 predict.py
-├── 🛠 utils.py
-├── 📄 requirements.txt
-├── 📄 runtime.txt
-├── 📘 README.md
+├── app.py
+├── Home.py
+├── api.py
+├── predict.py
+├── utils.py
+├── requirements.txt
+├── runtime.txt
+├── model.pkl
+├── imputer.pkl
 │
-├── 📁 pages
-│   ├── 🌍 Live_AQI.py
-│   └── 🤖 AQI_Prediction.py
+├── pages/
+│   ├── Live_AQI.py
+│   └── AQI_Prediction.py
 │
-├── 📁 dataset
+├── dataset/
 │   └── city_day.csv
 │
-├── 📁 assets
+├── assets/
 │   └── logo.png
 │
-├── 🧠 model.pkl
-└── 🗂 imputer.pkl
+└── README.md
 ```
 
 ---
 
-# 🌍 Live AQI Module
+## ⚙️ Installation
 
-✅ Search City
-
-✅ Live AQI
-
-✅ Weather Information
-
-✅ AQI Gauge
-
-✅ Pollutant Visualization
-
-✅ Health Recommendation
-
-✅ PDF Report Download
-
----
-
-# 🤖 AQI Prediction Module
-
-✅ Predict AQI
-
-✅ Pollutant Input
-
-✅ Interactive Graphs
-
-✅ Health Recommendation
-
-✅ PDF Report Download
-
----
-
-# ⚙️ Installation
-
-### 📥 Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/your-username/urban_air_quality_prediction.git
 ```
 
-### 📂 Go to Project Folder
+Navigate to the project folder
 
 ```bash
 cd urban_air_quality_prediction
 ```
 
-### 🐍 Create Virtual Environment
+Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-### ▶ Activate Environment
+Activate the virtual environment
 
-**Windows**
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Linux / macOS**
+### Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-### 📦 Install Dependencies
+Install the required packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 🚀 Run Application
+Run the application
 
 ```bash
 streamlit run app.py
@@ -198,23 +133,83 @@ streamlit run app.py
 
 ---
 
+## 🌐 Deployment
+
+This project is deployed using **Streamlit Community Cloud**.
+
+### Steps to Deploy
+
+1. Push the project to GitHub.
+2. Sign in to Streamlit Cloud.
+3. Click **New App**.
+4. Select your GitHub repository.
+5. Choose the `main` branch.
+6. Select `app.py` as the entry point.
+7. Click **Deploy**.
+
 ---
 
-# 🔑 API Configuration
+## 🔑 API Configuration
 
-Create
+This project uses the **OpenWeather API**.
 
-```text
+Create a file:
+
+```
 .streamlit/secrets.toml
 ```
 
-Add
+Add your API key:
 
 ```toml
-API_KEY = "YOUR_OPENWEATHER_API_KEY"
+API_KEY = "YOUR_API_KEY"
 ```
 
----
-Made with ❤️ using Python • Streamlit • Machine Learning
+Or configure it directly from the **Streamlit Cloud Secrets** section.
 
-</div>
+---
+
+## 📊 Machine Learning Model
+
+Algorithm Used:
+
+- Random Forest Regressor
+
+Model Performance:
+
+- ✅ R² Score: **0.91**
+- ✅ Mean Absolute Error (MAE): **20.85**
+
+---
+
+## 📷 Application Modules
+
+### 🌍 Live AQI
+
+- Current AQI
+- Weather Details
+- Pollutant Levels
+- AQI Gauge
+- Health Recommendations
+- PDF Report Download
+
+### 🤖 AQI Prediction
+
+- Predict AQI using pollutant values
+- Interactive charts
+- Health Recommendation
+- PDF Report Generation
+
+---
+
+## 👩‍💻 Author
+
+**Chandana V**
+
+Final Year Computer Science Engineering Student
+
+---
+
+## 📄 License
+
+This project is developed for educational and academic purposes.
