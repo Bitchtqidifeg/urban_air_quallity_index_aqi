@@ -202,14 +202,4 @@ Model Performance:
 
 ---
 
-## 👩‍💻 Author
-
-**Chandana V**
-
-Final Year Computer Science Engineering Student
-
----
-
-## 📄 License
-
 This project is developed for educational and academic purposes.
