@@ -198,24 +198,6 @@ streamlit run app.py
 
 ---
 
-# ☁️ Deployment
-
-### 🚀 Deploy on Streamlit Community Cloud
-
-1️⃣ Push the project to GitHub
-
-2️⃣ Login to Streamlit Cloud
-
-3️⃣ Click **New App**
-
-4️⃣ Select Repository
-
-5️⃣ Select Branch
-
-6️⃣ Choose **app.py**
-
-7️⃣ Click **Deploy**
-
 ---
 
 # 🔑 API Configuration
@@ -233,39 +215,6 @@ API_KEY = "YOUR_OPENWEATHER_API_KEY"
 ```
 
 ---
-
-# 🚀 Future Enhancements
-
-🌐 AQI Heat Maps
-
-📈 Historical Trend Analysis
-
-📱 Mobile Responsive Design
-
-🔔 Air Pollution Alerts
-
-🤖 Deep Learning Models
-
-🌎 Multi-language Support
-
----
-
-# 👩‍💻 Developed By
-
-## 🌸 Chandana V
-
-🎓 Computer Science Engineering
-
-💡 AI • Machine Learning • Data Science
-
----
-
-<div align="center">
-
-## ⭐ If you found this project helpful, consider giving it a Star!
-
-🌍 **Clean Air Starts with Better Insights** 🌿
-
 Made with ❤️ using Python • Streamlit • Machine Learning
 
 </div>
