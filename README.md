@@ -1,39 +1,271 @@
-# urban_air_quallity_index_aqi
+<div align="center">
 
-# Urban Air Quality Prediction — Deploy to Streamlit Cloud
+# 🌍 Urban Air Quality Prediction System
 
-Steps to deploy this app to Streamlit Cloud (recommended):
+### 🌱 AI-Powered Real-Time Air Quality Monitoring & AQI Prediction
 
-1. Create a new GitHub repository and push this project (root must contain `app.py` and `requirements.txt`).
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit">
+<img src="https://img.shields.io/badge/Machine_Learning-Random_Forest-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/OpenWeather-API-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge">
+</p>
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Urban Air Quality Prediction"
-   git branch -M main
-   git remote add origin <your-git-remote-url>
-   git push -u origin main
-   ```
+### 🚀 Try the Live Application
 
-2. Go to https://streamlit.io/cloud and sign in with GitHub.
+### 🌐 https://urbanairquallityindexaqi-4xh43c2ucdhjgktdfnniyn.streamlit.app/
 
-3. Click **New app** → choose the repository, branch `main`, and set the main file to `app.py`.
+⭐ **Predict • Monitor • Analyze • Stay Safe**
 
-4. Click **Deploy**. Streamlit Cloud will install packages from `requirements.txt` and start the app.
+</div>
 
-Notes and tips:
-- `runtime.txt` pins the Python version used on the host.
-- `.streamlit/config.toml` sets `headless=true` and disables CORS for cloud hosting.
-- If you use private API keys (e.g., OpenWeather API key), add them using Streamlit Cloud's **Secrets** (Dashboard → Settings → Secrets) as `API_KEY` and read them in `api.py` using `st.secrets`.
+---
 
-Local test before deployment:https://urbanairquallityindexaqi-4xh43c2ucdhjgktdfnniyn.streamlit.app/
+# 🌟 About the Project
+
+The **Urban Air Quality Prediction System** is an AI-powered web application that combines **Machine Learning** and **real-time weather APIs** to monitor and predict Air Quality Index (AQI).
+
+The application helps users understand pollution levels, visualize pollutants, receive personalized health recommendations, and download professional PDF reports.
+
+---
+
+# ✨ Key Features
+
+### 🌍 Live Air Quality Monitoring
+- 📍 Search AQI by City Name
+- 🌡 Live Temperature
+- 💧 Humidity
+- 🌬 Wind Speed
+- 🧭 Atmospheric Pressure
+
+### 📊 Interactive Dashboard
+- 🎯 AQI Gauge
+- 📈 Pollutant Charts
+- 🎨 Beautiful Visualizations
+
+### 🤖 Machine Learning Prediction
+- 🌲 Random Forest Regression
+- 📉 Predict AQI using pollutant values
+- ⚡ Fast Predictions
+
+### 💡 Smart Recommendations
+- 😊 Health Suggestions
+- 🚨 Pollution Alerts
+
+### 📄 Reports
+- 📥 Download Professional PDF Report
+
+---
+
+# 🛠️ Technology Stack
+
+| 💻 Category | 🚀 Technologies |
+|-------------|-----------------|
+| Programming | Python |
+| Machine Learning | Scikit-learn |
+| Algorithm | Random Forest Regressor |
+| Frontend | Streamlit |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Plotly |
+| API | OpenWeather API |
+| PDF Reports | ReportLab |
+
+---
+
+# 🧠 Machine Learning Model
+
+### 🌲 Algorithm
+
+✅ Random Forest Regressor
+
+### 📊 Model Performance
+
+| Metric | Value |
+|--------|-------|
+| 🎯 R² Score | **0.91** |
+| 📉 MAE | **20.85** |
+
+---
+
+# 📂 Project Structure
+
+```text
+📦 Urban-Air-Quality-Prediction
+│
+├── 🏠 app.py
+├── 🌍 Home.py
+├── 🌐 api.py
+├── 🤖 predict.py
+├── 🛠 utils.py
+├── 📄 requirements.txt
+├── 📄 runtime.txt
+├── 📘 README.md
+│
+├── 📁 pages
+│   ├── 🌍 Live_AQI.py
+│   └── 🤖 AQI_Prediction.py
+│
+├── 📁 dataset
+│   └── city_day.csv
+│
+├── 📁 assets
+│   └── logo.png
+│
+├── 🧠 model.pkl
+└── 🗂 imputer.pkl
+```
+
+---
+
+# 🌍 Live AQI Module
+
+✅ Search City
+
+✅ Live AQI
+
+✅ Weather Information
+
+✅ AQI Gauge
+
+✅ Pollutant Visualization
+
+✅ Health Recommendation
+
+✅ PDF Report Download
+
+---
+
+# 🤖 AQI Prediction Module
+
+✅ Predict AQI
+
+✅ Pollutant Input
+
+✅ Interactive Graphs
+
+✅ Health Recommendation
+
+✅ PDF Report Download
+
+---
+
+# ⚙️ Installation
+
+### 📥 Clone Repository
+
+```bash
+git clone https://github.com/your-username/urban_air_quality_prediction.git
+```
+
+### 📂 Go to Project Folder
+
+```bash
+cd urban_air_quality_prediction
+```
+
+### 🐍 Create Virtual Environment
 
 ```bash
 python -m venv venv
-venv\Scripts\activate
+```
 
+### ▶ Activate Environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### 📦 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 🚀 Run Application
+
+```bash
 streamlit run app.py
 ```
 
-If you want help pushing to GitHub or setting secrets, tell me and I will provide the exact commands or add a `.gitignore` and other helper files.
+---
 
+# ☁️ Deployment
+
+### 🚀 Deploy on Streamlit Community Cloud
+
+1️⃣ Push the project to GitHub
+
+2️⃣ Login to Streamlit Cloud
+
+3️⃣ Click **New App**
+
+4️⃣ Select Repository
+
+5️⃣ Select Branch
+
+6️⃣ Choose **app.py**
+
+7️⃣ Click **Deploy**
+
+---
+
+# 🔑 API Configuration
+
+Create
+
+```text
+.streamlit/secrets.toml
+```
+
+Add
+
+```toml
+API_KEY = "YOUR_OPENWEATHER_API_KEY"
+```
+
+---
+
+# 🚀 Future Enhancements
+
+🌐 AQI Heat Maps
+
+📈 Historical Trend Analysis
+
+📱 Mobile Responsive Design
+
+🔔 Air Pollution Alerts
+
+🤖 Deep Learning Models
+
+🌎 Multi-language Support
+
+---
+
+# 👩‍💻 Developed By
+
+## 🌸 Chandana V
+
+🎓 Computer Science Engineering
+
+💡 AI • Machine Learning • Data Science
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project helpful, consider giving it a Star!
+
+🌍 **Clean Air Starts with Better Insights** 🌿
+
+Made with ❤️ using Python • Streamlit • Machine Learning
+
+</div>
