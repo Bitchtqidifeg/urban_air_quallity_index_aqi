@@ -202,4 +202,3 @@ Model Performance:
 
 ---
 
-This project is developed for educational and academic purposes.
